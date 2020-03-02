@@ -1,0 +1,35 @@
+{
+  "name": "kf2e-cli",
+  "version": "0.0.1",
+  "description": "Public framework command line tools",
+  "main": "index.js",
+  "bin": {
+    "kf2e": "./bin/www"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xubaoshi/kf2e-cli.git"
+  },
+  "author": "baoshi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xubaoshi/kf2e-cli/issues"
+  },
+  "homepage": "https://github.com/xubaoshi/kf2e-cli#readme",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "chalk": "^2.4.2",
+    "commander": "^3.0.1",
+    "consolidate": "^0.15.1",
+    "download-git-repo": "^2.0.0",
+    "inquirer": "^7.0.0",
+    "mem-fs": "^1.1.3",
+    "mem-fs-editor": "^6.0.0",
+    "metalsmith": "^2.3.0",
+    "ncp": "^2.0.0",
+    "ora": "^4.0.1"
+  }
+}
