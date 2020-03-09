@@ -9,7 +9,7 @@ const mapAction = { // 需要生成的指令数据
 		alias: 'c',
 		description: 'create a project',
 		examples: [
-			'mofang-cli create <project-name>',
+			'kf2e create <project-name>',
 		],
 	},
 	'*': {

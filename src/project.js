@@ -8,13 +8,7 @@ const memFs = require('mem-fs')
 const editor = require('mem-fs-editor')
 const { exec } = require('child_process')
 const { getDirFileName } = require('./utils')
-const {
-  INJECT_FILES,
-  FRAMEWORKS,
-  VUE_TEMPLATES,
-  REACT_TEMPLATES,
-  REACT_NATIVE_TEMPLATES
-} = require('./constants')
+const { INJECT_FILES } = require('./constants')
 
 function Project(options) {
   this.config = Object.assign(
@@ -36,28 +30,7 @@ Project.prototype.create = function() {
     this.config.template =
       'direct:https://github.com/xubaoshi/user-analysis.git'
     this.generate()
-    // this.selectTemplate()
-    // 	.then(answer2 => {
-    // 		this.config = Object.assign(this.config, answer2);
-    // 		this.generate();
-    // 	})
   })
-}
-
-Project.prototype.selectTemplate = function() {
-  const prompts = []
-  prompts.push({
-    name: 'template',
-    type: 'list',
-    message: `Please pick a template:`,
-    choices:
-      this.config.framework === 'Vue'
-        ? VUE_TEMPLATES
-        : this.config.framework === 'React'
-        ? REACT_TEMPLATES
-        : REACT_NATIVE_TEMPLATES
-  })
-  return inquirer.prompt(prompts)
 }
 
 Project.prototype.inquire = function() {
@@ -110,13 +83,6 @@ Project.prototype.inquire = function() {
       message: 'Please input author'
     })
   }
-
-  // prompts.push({
-  //   name: 'framework',
-  //   type: 'list',
-  //   message: `Please pick a framework:`,
-  //   choices: FRAMEWORKS
-  // })
 
   return inquirer.prompt(prompts)
 }

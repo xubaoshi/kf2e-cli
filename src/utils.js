@@ -12,7 +12,7 @@ function getPackageVersion() {
 }
 
 function logPackageVersion() {
-  const msg = `zero-cli version: ${getPackageVersion()}`;
+  const msg = `kf2e-cli version: ${getPackageVersion()}`;
   console.log();
   console.log(msg);
   console.log();
