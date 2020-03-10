@@ -28,7 +28,7 @@ Project.prototype.create = function() {
   this.inquire().then(answer => {
     this.config = Object.assign(this.config, answer)
     this.config.template =
-      'direct:https://github.com/xubaoshi/user-analysis.git'
+      'direct:https://xubaoshi:xu910527@szgitlab.kedacom.com/ctsp-front/public-framework.git'
     this.generate()
   })
 }
@@ -175,7 +175,7 @@ Project.prototype.generate = function() {
           `🗃 Installing dependency. This might take a while...`
         )
         installSpinner.start()
-        exec('npm install', (error, stdout, stderr) => {
+        exec('cnpm install', (error, stdout, stderr) => {
           if (error) {
             installSpinner.color = 'red'
             installSpinner.fail(
@@ -196,7 +196,9 @@ Project.prototype.generate = function() {
             )
             console.log()
             console.log(chalk.cyan(` ${chalk.gray('$')} cd ${projectName}`))
-            console.log(chalk.cyan(` ${chalk.gray('$')} npm start`))
+            console.log(
+              chalk.cyan(` ${chalk.gray('$')} cnpm run dev or npm run dev`)
+            )
           }
         })
       })
