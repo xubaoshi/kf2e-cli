@@ -196,7 +196,7 @@ Project.prototype.generate = function() {
             )
             console.log()
             console.log(chalk.cyan(` ${chalk.gray('$')} cd ${projectName}`))
-            console.log(chalk.cyan(` ${chalk.gray('$')} npm start`))
+            console.log(chalk.cyan(` ${chalk.gray('$')} npm dev`))
           }
         })
       })
